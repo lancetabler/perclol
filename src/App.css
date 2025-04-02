@@ -52,7 +52,7 @@
     }   
     
     .name {
-        margin-left: 10px;
+        margin-left: 20px;
         font-weight: bold;
         position: fixed;
         font-size: 22px;
@@ -134,7 +134,7 @@
 
     .bio {
 
-      margin-left: 10px;
+      margin-left: 20px;
       position: fixed;
       font-size: 13px;
       margin-right: 10px;
@@ -148,7 +148,7 @@
     .links {
         gap: .75rem;
         position: fixed;
-        left: 50%;
+        left: 260px;
         transform: translateX(-50%);
         top: 200px;
         background-color: #00000000;

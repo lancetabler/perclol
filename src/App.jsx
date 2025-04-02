@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import pfp from './images/pfp1.gif';
+import pfp from './images/pfp.png';
 import view from './images/viewW.svg';
 import twitter from './images/x.png';
 import insta from './images/insta.png';
 import yt from './images/yt.png';
 import discord from './images/discord.png';
 import cover from './images/cover.png';
-import stop from './song/stopplayin.mp3';
-import bg from './videos/car.mp4';
+import stop from './song/FOMDJ.mp3';
+import bg from './videos/FOMDJMV.mp4';
 import git from './images/git2.png';
 
 function App() {
-  const [viewCount, setViewCount] = useState(3242);
+  const [viewCount, setViewCount] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
-  const maxTime = 128;
+  const maxTime = 200;
   const [isPlaying, setIsPlaying] = useState(false);
   const [showOverlay, setShowOverlay] = useState(true);
   const [isOverlayClicked, setIsOverlayClicked] = useState(false);
   const [copyStatus, setCopyStatus] = useState('');
   const [cssLabel, setCssLabel] = useState('Copy BTC Address');
-  const [cssLabel1, setCssLabel1] = useState('Copy LTC Address');
+  const [cssLabel1, setCssLabel1] = useState('Copy SOL Address');
   const [bio, setBio] = useState('');
   const [entered, setEntered] = useState(false); // State for animation
 
   // Typewriter effect
-  const [bioText, setBioText] = useState("Owner of shdw.site");
+  const [bioText, setBioText] = useState("Corti Hub on top");
   const [index, setIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
 
@@ -111,7 +111,7 @@ function App() {
         setCssLabel1('Copied');
         setTimeout(() => {
           setCopyStatus('');
-          setCssLabel1('Copy LTC Address');
+          setCssLabel1('Copy SOL Address');
         }, 2000);
       })
       .catch(error => console.error('Error copying address to clipboard:', error));
@@ -156,23 +156,14 @@ function App() {
         <p1 className='num'>{viewCount}</p1>
         <img src={pfp} className='pfp' alt="Profile Picture" />
         <div className='info' >
-          <h1 className='name'>shadow</h1>
+          <h1 className='name'>Lance</h1>
           <h1 className='bio'>{bio}</h1> {/* Bio with typewriter effect */}
         </div>
         <div className='links'>
-          <a href="https://twitter.com/2HB2QedJXb7055" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/evilopmdlr" target="_blank" rel="noopener noreferrer">
             <img src={twitter} className='link1' alt="Twitter" />
           </a>
-          <a href="https://github.com/movemented" target="_blank" rel="noopener noreferrer">
-            <img src={git} className='link2' alt="GitHub" />
-          </a>
-          <a href="https://www.instagram.com/movemented/" target="_blank" rel="noopener noreferrer">
-            <img src={insta} className='link3' alt="Instagram" />
-          </a>
-          <a href="https://www.youtube.com/channel/UCbrSndkaflZIa6HaCBHLRvA" target="_blank" rel="noopener noreferrer">
-            <img src={yt} className='link4' alt="YouTube" />
-          </a>
-          <a href="https://discord.com/users/1079862959360184390" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/corti" target="_blank" rel="noopener noreferrer">
             <img src={discord} className='link5' alt="Discord" />
           </a>
         </div>
@@ -181,13 +172,13 @@ function App() {
           <div className='progress-bar-container'>
             <div className='progress-bar' style={{ width: `${(currentTime / maxTime) * 100}%` }} />
           </div>
-          <a href='https://soundcloud.com/trapdailysounds/glokk40spaz-sg-lul-ki-stop-playin-prod-by-khroam' target='_blank' rel='noopener noreferrer'>
+          <a href='https://soundcloud.com/playboicarti/fomdj-2?in=playboicarti/sets/music-sorry-4-da-wait' target='_blank' rel='noopener noreferrer'>
             <img src={cover} className='songcover' alt='' />
           </a>
           <div className='songinfo'>
-            <p1 className='songtitle'>Wokeup</p1>
-            <p1 className='artist'>by Kankan</p1>
-            <p1 className='album' href>on Wokeup</p1>
+            <p1 className='songtitle'>FOMDJ</p1>
+            <p1 className='artist'>by Playboi Carti</p1>
+            <p1 className='album' href>on I AM MUSIC</p1>
           </div>
           <div className='time-label'>
             {formatTime(currentTime)} / {formatTime(maxTime)}
@@ -197,14 +188,14 @@ function App() {
         <div className='div2'></div>
         <button
           className='button2'
-          onClick={() => handleCopyAddress1('ltc1qwu5kth29x3ev63fuex4ln873kdwdxdnvw0fvdq', 'LTC Address')}
+          onClick={() => handleCopyAddress1('Euh3Ae8dhxMqDF1QqbHAuLRyxd1Z6GB2M9wBg6ndkUN5', 'SOL Address')}
           data-label={cssLabel1}
         >
-          LTC
+          SOL
         </button>
         <button
           className='button1'
-          onClick={() => handleCopyAddress('bc1qmdde26zln58kprcz2fxf7980ad9jfnpxa7ev4p', 'BTC Address')}
+          onClick={() => handleCopyAddress('bc1qeel5hvfdsvaj0pj3qsd3ra0ecq8l8lfel9j496', 'BTC Address')}
           data-label={cssLabel}
         >
           BTC
